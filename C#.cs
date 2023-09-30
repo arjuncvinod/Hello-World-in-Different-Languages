@@ -1,9 +1,9 @@
-namespace HelloWorld
+using System;
+
+public class Hacktoberfest
 {
-    class Hello {        
-        static void Main(string[] args)
-        {
-            System.Console.WriteLine("Hello World");
-        }
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Hello, World!");
     }
 }
