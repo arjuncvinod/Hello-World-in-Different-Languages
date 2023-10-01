@@ -1,0 +1,4 @@
+After installation process, the following lines should be entered in mongo shell (client terminal).
+
+> db.world.insert({ "speech" : "Hello World!" });
+> cur = db.world.find();x=cur.next();print(x["speech"]);
