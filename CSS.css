@@ -1,0 +1,4 @@
+/* Printing Hello World in CSS */
+.hello-world:before {
+    content: "Hello World";
+}
