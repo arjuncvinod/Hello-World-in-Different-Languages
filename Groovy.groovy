@@ -1,1 +1,3 @@
-println "Hello, World!"
+
+/* Hello World in Groovy */
+println("Hello world")
