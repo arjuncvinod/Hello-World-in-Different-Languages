@@ -1,7 +1,15 @@
+// initialize go project using ->  go mod init 'your_project_name'
+
+
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 func main() {
-    fmt.Println("Hello, World!")
+	log.Println("Hello World")
+	// OR
+	fmt.Println("Hello World")
 }
