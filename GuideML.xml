@@ -1,0 +1,10 @@
+<guide>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <block>
+      <h1>Hello World Coders!</h1>
+    </block>
+  </body>
+</guide>
