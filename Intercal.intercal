@@ -1,0 +1,59 @@
+DO ,1 <- #13
+DO ,1 <- #238
+DO ,1 <- #108
+DO ,1 <- #112
+DO ,1 <- #117
+DO ,1 <- #98
+DO ,1 <- #32
+DO ,1 <- #40
+DO ,1 <- #119
+DO ,1 <- #111
+DO ,1 <- #114
+DO ,1 <- #108
+DO ,1 <- #100
+DO ,1 <- #41
+DO ,1 <- #10
+PLEASE DO ,1 SUB #1 <- #238
+DO ,1 SUB #2 <- #108
+DO ,1 SUB #3 <- #112
+DO ,1 SUB #4 <- #117
+DO ,1 SUB #5 <- #98
+DO ,1 SUB #6 <- #32
+DO ,1 SUB #7 <- #40
+DO ,1 SUB #8 <- #119
+DO ,1 SUB #9 <- #111
+DO ,1 SUB #10 <- #114
+DO ,1 SUB #11 <- #108
+DO ,1 SUB #12 <- #100
+DO ,1 SUB #13 <- #41
+DO ,1 SUB #14 <- #10
+PLEASE DO ,1 SUB #15 <- #0
+DO ,1 SUB #16 <- #238
+DO ,1 SUB #17 <- #36
+DO ,1 SUB #18 <- #91
+DO ,1 SUB #19 <- #29
+DO ,1 SUB #20 <- #72
+DO ,1 SUB #21 <- #30
+DO ,1 SUB #22 <- #69
+DO ,1 SUB #23 <- #41
+DO ,1 SUB #24 <- #32
+DO ,1 SUB #25 <- #123
+DO ,1 SUB #26 <- #92
+DO ,1 SUB #27 <- #93
+DO ,1 SUB #28 <- #91
+DO ,1 SUB #29 <- #124
+DO ,1 SUB #30 <- #93
+DO ,1 SUB #31 <- #125
+DO ,1 SUB #32 <- #123
+DO ,1 SUB #33 <- #126
+DO ,1 SUB #34 <- #125
+DO ,1 SUB #35 <- #32
+DO ,1 SUB #36 <- #92
+DO ,1 SUB #37 <- #93
+DO ,1 SUB #38 <- #91
+DO ,1 SUB #39 <- #124
+DO ,1 SUB #40 <- #93
+DO ,1 SUB #41 <- #125
+DO ,1 SUB #42 <- #10
+PLEASE READ OUT ,1
+PLEASE GIVE UP
