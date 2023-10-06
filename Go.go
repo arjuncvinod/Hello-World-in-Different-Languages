@@ -12,5 +12,4 @@ func main() {
 	log.Println("Hello World")
 	// OR
 	fmt.Println("Hello World")
-
 }
