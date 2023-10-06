@@ -17,7 +17,7 @@ def add_matrices(matrix1, matrix2):
 
 # Input for matrix1
 matrix1 = []
-rows1 = int(input("Enter the number of rows for matrix 1: "))
+rows1 = int(input("Enter the number of rows for matrix  1: "))
 cols1 = int(input("Enter the number of columns for matrix 1: "))
 print("Enter the elements of matrix 1:")
 
