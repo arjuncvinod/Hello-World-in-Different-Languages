@@ -1,0 +1,91 @@
+                                                                      SCHOOL MANAGEMENT PROJECT IN JAVA
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+    private String name;
+    private int rollNumber;
+
+    public Student(String name, int rollNumber) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Roll Number: " + rollNumber + ", Name: " + name;
+    }
+}
+
+public class SchoolManagementSystem {
+    private static ArrayList<Student> students = new ArrayList<>();
+    private static int rollCounter = 1;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("\nSchool Management System");
+            System.out.println("1. Add Student");
+            System.out.println("2. Retrieve Student");
+            System.out.println("3. Display All Students");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline character
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter student name: ");
+                    String name = scanner.nextLine();
+                    addStudent(name);
+                    break;
+                case 2:
+                    System.out.print("Enter roll number to retrieve: ");
+                    int rollNumber = scanner.nextInt();
+                    retrieveStudent(rollNumber);
+                    break;
+                case 3:
+                    displayAllStudents();
+                    break;
+                case 4:
+                    System.out.println("Exiting the program.");
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice. Please enter a valid option.");
+            }
+        }
+    }
+
+    private static void addStudent(String name) {
+        Student student = new Student(name, rollCounter++);
+        students.add(student);
+        System.out.println("Student added successfully. Roll Number: " + student.getRollNumber());
+    }
+
+    private static void retrieveStudent(int rollNumber) {
+        for (Student student : students) {
+            if (student.getRollNumber() == rollNumber) {
+                System.out.println("Student found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student with Roll Number " + rollNumber + " not found.");
+    }
+
+    private static void displayAllStudents() {
+        System.out.println("List of all students:");
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
+}
