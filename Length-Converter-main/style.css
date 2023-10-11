@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: #eee;
+    
+}
+
+.wrapper{
+    padding: 20px;
+    max-width: 400px;
+    background-color: #000;
+    border-radius: 10px;
+    
+}
+
+.converter{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.converter span{
+    width: 30px;
+    height: 30px;
+    background: url(./convert_arrow.svg) no-repeat center;
+    margin: 0 10px;
+}
+
+input , select {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: #111;
+    color: #eee;
+    text-align: center;
+    font-size: 16px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+select{
+    cursor: pointer;
+}
+
+.See_also{
+    padding-left:5rem;
+}
