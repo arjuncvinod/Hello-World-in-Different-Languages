@@ -1,0 +1,58 @@
+# Tic-Tac-Toe Game
+
+# Initialize the board
+board = [" " for _ in range(9)]
+
+# Function to display the Tic-Tac-Toe board
+def display_board():
+    print(f"{board[0]} | {board[1]} | {board[2]}")
+    print("--+---+--")
+    print(f"{board[3]} | {board[4]} | {board[5]}")
+    print("--+---+--")
+    print(f"{board[6]} | {board[7]} | {board[8]}")
+
+# Function to check for a win
+def check_win():
+    # Check rows
+    for i in range(0, 9, 3):
+        if board[i] == board[i + 1] == board[i + 2] != " ":
+            return True
+    # Check columns
+    for i in range(3):
+        if board[i] == board[i + 3] == board[i + 6] != " ":
+            return True
+    # Check diagonals
+    if board[0] == board[4] == board[8] != " ":
+        return True
+    if board[2] == board[4] == board[6] != " ":
+        return True
+    return False
+
+# Function to check for a tie
+def check_tie():
+    return " " not in board
+
+# Main game loop
+current_player = "X"
+while True:
+    display_board()
+    print(f"Player {current_player}'s turn. Enter a position (1-9): ")
+    try:
+        position = int(input()) - 1
+        if 0 <= position <= 8 and board[position] == " ":
+            board[position] = current_player
+            if check_win():
+                display_board()
+                print(f"Player {current_player} wins!")
+                break
+            if check_tie():
+                display_board()
+                print("It's a tie!")
+                break
+            current_player = "O" if current_player == "X" else "X"
+        else:
+            print("Invalid input. Try again.")
+    except ValueError:
+        print("Invalid input. Please enter a number (1-9).")
+
+# End of the game
