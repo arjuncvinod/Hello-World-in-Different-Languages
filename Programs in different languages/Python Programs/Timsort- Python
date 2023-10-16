@@ -1,0 +1,45 @@
+def timsort(array):
+  runs = find_runs(array)
+  merged_array = merge_runs(runs)
+  return merged_array
+
+
+def find_runs(array):
+  runs = []
+  current_run = []
+  for i in range(len(array)):
+    if i == 0 or array[i] > array[i - 1]:
+      current_run.append(array[i])
+    else:
+      runs.append(current_run)
+      current_run = []
+  if current_run:
+    runs.append(current_run)
+  return runs
+
+def merge_runs(runs):
+  merged_array = []
+  while len(runs) > 1:
+    run1 = runs.pop()
+    run2 = runs.pop()
+    merged_run = merge(run1, run2)
+    merged_array += merged_run
+  if runs:
+    merged_array += runs[0]
+  return merged_array
+def merge(run1, run2):
+  merged_run = []
+  i = 0
+  j = 0
+  while i < len(run1) and j < len(run2):
+    if run1[i] < run2[j]:
+      merged_run.append(run1[i])
+      i += 1
+    else:
+      merged_run.append(run2[j])
+      j += 1
+
+  merged_run += run1[i:]
+  merged_run += run2[j:]
+
+  return merged_run
