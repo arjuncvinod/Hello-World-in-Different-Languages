@@ -1,0 +1,92 @@
+e.cssCSS * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(images/login.jpg);
+  font-family: verdana;
+}
+
+.tampilan {
+  background: #dedede;
+  width: 400px;
+  margin: 50px auto;
+  border-radius: 16px;
+  min-height: 256px;
+  overflow: hidden;
+}
+.kepala {
+  background: #281e5a;
+  padding: 10px 22px;
+  height: 60px;
+}
+
+.logo {
+  background-image: url(images/logo-ubg.jpg);
+  background-position: center;
+  background-size: 60px;
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 20px;
+}
+
+.kepala h2.judul {
+  color: #fff;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: left;
+  line-height: 20px;
+}
+
+.kesalahan {
+  font-size: 20px;
+  color: #ff0000;
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+
+.artikel {
+  padding: 10px 22px 0;
+  color: #808080;
+}
+
+.artikel div.kotak {
+  margin: 16px 0;
+}
+
+.kotak input[type="text"],
+.kotak input[type="password"] {
+  font-size: 15px;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  background: #eeeeee;
+  border: none;
+  color: #808080;
+}
+
+.kotak input[type="submit"] {
+  background: #ff5555;
+  font-size: 0.8em;
+  margin: 0 0 0 150px;
+  margin-right: auto;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.kotak .daftar a {
+  text-decoration: none;
+  color: #808080;
+}
+
+.kotak .daftar a:hover {
+  color: #281e5a;
+}
+
+.kotak .daftar {
+  text-align: center;
+  font-size: 0.8em;
+}
