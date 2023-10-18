@@ -1,1 +1,0 @@
-server.log("Hello, World!");
