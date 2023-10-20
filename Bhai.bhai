@@ -1,0 +1,8 @@
+// Hello world program in Bhai language
+
+// Entry point 
+hi bhai
+  // bol bhai- prints the statements in console
+  bol bhai "Hello World";
+// Exit point
+bye bhai
