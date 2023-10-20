@@ -1,0 +1,125 @@
+#include<stdio.h>
+#include<process.h>
+#include<string.h>
+char stack[20]; //character type
+int top=-1;
+char pop();
+void push(char item);
+int isoperand(char symbol);
+int isoperator(char symbol);
+void converttopost(char infix[20],char postfix[20]);
+int prcd(char symbol);
+char pop()
+{
+	char ch;
+	ch=stack[top];
+	top--;
+	return ch;
+}
+void push(char item)
+{
+	top++;
+	stack[top]=item;
+}
+int isoperand(char symbol)
+{
+	if((symbol>='a'&& symbol<='z') ||
+	  (symbol>='A' && symbol<='Z')||
+	  (symbol>='0' && symbol<='9'))
+	    return 1;
+    else
+	  	return 0;
+}
+
+int isoperator(char symbol)
+{
+	switch(symbol)
+	{
+		case '+':
+		case '-':
+		case '*':
+		case '/':
+		case '^':
+		case '$':
+		case '(':
+		case ')': return 1;
+		default: return 0;	
+	}
+}
+int prcd(char symbol)
+{
+	switch(symbol)
+	{
+
+	    case '+':
+		case '-': return 2;
+		case '*':
+		case '/': return 4;
+	    case '^':
+		case '$': return 6;
+		case '(':
+		case ')': return 1;	
+
+    }
+}
+void converttopost(char infix[20],char postfix[20])
+{
+	int i,j=0;
+	char symbol;
+	for(i=0;i<strlen(infix);i++)
+	{
+		symbol=infix[i];
+		if(isoperand(symbol)==1)
+		{
+			postfix[j]=symbol;
+			j++;
+		}
+		else if(symbol=='(')
+			push(symbol);
+
+		else if(symbol==')')
+		{
+			while(stack[top]!='(')
+			{
+				postfix[j]=pop();
+				j++;
+			}
+			pop();
+		}
+		else if(isoperator(symbol)==1)
+		{
+			if(prcd(symbol)>prcd(stack[top]))
+				push(symbol);
+
+			else 
+			{
+				while (prcd(symbol)<=prcd(stack[top]))
+				{
+					postfix[j]=pop();
+					j++;
+				}
+				push(symbol);
+			}
+		}
+		else
+		{
+			printf("\n Invalid Symbol: %c ",symbol);
+			exit(0);
+		}
+	}
+	while(top!=-1)
+	{
+		postfix[j]=pop();
+		j++;
+	}
+	postfix[j]='\0';
+}
+int main()
+{
+		char infix[20],postfix[20];
+		printf("enter the valid infix string \n");
+		gets(infix);
+		converttopost(infix,postfix);
+		printf("the corresponding postfix string: %c \n");
+		puts(postfix);
+}
