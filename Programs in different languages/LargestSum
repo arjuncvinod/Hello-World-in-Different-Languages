@@ -1,0 +1,40 @@
+public class LargestSum {
+    public static void main(String[] args) {
+        int[] arr = {7, 2, 5, 10, 8};
+        int m= 2;
+        int ans = sumOfSubArray(arr, m);
+        System.out.println(ans);
+    }
+    public static int sumOfSubArray(int[] nums, int k){
+        int max = 0;
+        int total = 0;
+        for(int i=0; i<nums.length;i++){
+            if(nums[i]>max){
+                max = nums[i];
+            }
+            total = total + nums[i];
+        }
+        int start = max;
+        int end = total;
+        while(start<end){
+            int sum =0;
+            int count =1;
+            int mid = start+ (end - start)/ 2;
+            for (int i = 0; i < nums.length; i++) {
+                int num = nums[i];
+                if (sum + num <= mid) {
+                    sum = sum + num;
+                } else {
+                    sum = num;
+                    count++;
+                }
+            }
+            if(count>k){
+                start= mid+1;
+            }else {
+                end = mid;
+            }
+        }
+        return start;
+    }
+}
